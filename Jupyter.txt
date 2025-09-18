@@ -1,0 +1,50 @@
+Run MATLAB code in Jupyter (Windows)
+0) Prerequisites
+
+MATLAB installed (R2018b or newer recommended).
+
+	Python 3 installed (the py launcher is fine).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Jupyter Lab or Notebook installed:
+
+	py -3 -m pip install jupyterlab
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Install the MATLAB Engine for Python
+
+This lets Python/Jupyter talk to MATLAB.
+
+Open Command Prompt as Administrator (Start menu → type “cmd” → right-click → Run as administrator).
+
+Run these commands (change the MATLAB path/version if yours differs):
+
+		cd "C:\Program Files\MATLAB\R2025a\extern\engines\python"
+		py -3 -m pip install .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If your MATLAB is R2023b, for example:
+
+		cd "C:\Program Files\MATLAB\R2023b\extern\engines\python"
+		py -3 -m pip install .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Install the MATLAB kernel for Jupyter
+
+		py -3 -m pip install matlab_kernel
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Launch Jupyter
+jupyter lab
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Run your script
+Save your script (the one you shared) as:
+C:\Users\msi-pc\Desktop\Stress\dataset\extract_features.m
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In a MATLAB notebook cell, run
+
+run('C:\Users\msi-pc\Desktop\Stress\dataset\extract_features.m')
+
